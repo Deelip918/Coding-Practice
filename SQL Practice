@@ -33,3 +33,14 @@ FROM Customers A, Customers B
 WHERE A.CustomerID = B.CustomerID
 AND A.City = B.City 
 ORDER BY A.City;
+
+Date=19-01-2023
+1. where condition
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin';
+2.order by condition
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+3.Insert into
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
