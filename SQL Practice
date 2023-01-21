@@ -80,3 +80,23 @@ WHERE CustomerName LIKE '%or%';
 Finds any values that start with "a" and ends with "o"
 SELECT * FROM Customers
 WHERE ContactName LIKE 'a%o';
+
+# Date 21-02-2023
+
+IN Operator
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+BETWEEN Operator
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+
+Alias for Columns
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
+
+UNION Operator
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
