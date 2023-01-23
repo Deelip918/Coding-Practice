@@ -150,7 +150,7 @@ WHERE City LIKE '[a-c]%';
 
 SELECT * FROM Customers
 WHERE City LIKE '[!acs]%';
-3. case statement
+3. case expresion
 SELECT CustomerName, City, Country
 FROM Customers
 ORDER BY
