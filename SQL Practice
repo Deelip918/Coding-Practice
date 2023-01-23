@@ -133,3 +133,28 @@ CREATE TABLE Persons (
 
 ALTER TABLE Persons
 ADD CONSTRAINT CHK_PersonAge CHECK (Age>=18 AND City='Sandnes');
+Date 23-01-2022
+1. count,avg,sum
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+SELECT COUNT(ProductID)
+FROM Products;
+
+SELECT AVG(Price)
+FROM Products;
+
+2. wildcards
+SELECT * FROM Customers
+WHERE City LIKE '[a-c]%';
+
+SELECT * FROM Customers
+WHERE City LIKE '[!acs]%';
+3. case statement
+SELECT CustomerName, City, Country
+FROM Customers
+ORDER BY
+(CASE
+    WHEN City IS NULL THEN Country
+    ELSE City
+END);
