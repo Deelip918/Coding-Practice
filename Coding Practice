@@ -87,7 +87,7 @@ def solve(s):
     return s
 if __name__ == '__main__':
 
-Date 22-01-2023
+Date 21-01-2023
 1. finding text in a string
 txt = "The best things in life are free!"
 if "expensive" not in txt:
@@ -105,7 +105,7 @@ b = "World"
 c = a + " " + b
 print(c)
 
-Date-23-01-2023
+Date-22-01-2023
 
 1. Using the list() constructor to make a List:
 
@@ -139,3 +139,29 @@ for x in list2:
   list1.append(x)
 
 print(list1)
+Date 23-01-2022
+1.https://practice.geeksforgeeks.org/problems/missing-number-in-array1416/1?page=1&sortBy=submissions
+class Solution:
+    def MissingNumber(self,arr,n):
+        total = (n + 1)*(n)//2
+        sum_of_Aarray = sum(arr)
+        return total - sum_of_A
+	
+2. function to return addition, subtraction of two given nombers
+def calculation(a, b):
+    add = a + b
+    sub = a - b
+    return add, sub
+res = calculation(40, 10)
+output= 50,30
+
+3. function with default aurgument
+def show_employee(name, salary=9000):
+    print("Name:", name, "salary:", salary)
+
+show_employee("Ben", 12000)
+show_employee("Jessa")
+
+output
+Name: Ben salary: 12000
+Name: Jessa salary: 9000
