@@ -310,33 +310,30 @@ select*from amazon
 select*from users
 
 
-(I) Outputs for following type of joins
-                                      Table A Table B			
-										X		Y			
-Inner Join								1		1			
-Left Join								1		2			
-Right Join															
-Full outer join															
-Cross join															
-															
-On															
-1. A.X = A.X
-      Inner Join  Left Join	  Right Join  Full outer  Cross join	
-		1	1		1	1		1	1		1	1		1	1
-		1	1		1	1		1	1		1	1		1	1
-		1	1		1	1		1	1		1	1		1	1
-		1	1		1	1		1	1		1	1		1	1
-															
-2. B.Y = B.Y
-      Inner Join  Left Join	  Right Join Full outer  Cross join	
-		1	1		1	1		1	1		1	1		1	1
-		2	2		2	2		2	2		2	2		1	2
-														2	1
-														2	2
-															
-3. A.X = B.Y
-      Inner Join  Left Join	  Right Join  Full outer  Cross join	
-		1	1		1	1		1	1		1	1		1	1
-		1	1		1	1		1	1		1	1		1	2
-							 null    2	  null	2	    1	1
-														1	2
+																
+	(I) Outputs for following type of joins										Table A		Table B			
+											X		Y			
+	Inner Join										1		1			
+	Left Join										1		2			
+	Right Join															
+	Full outer join															
+	Cross join															
+																
+	On															
+	1. A.X = A.X		Inner Join			Left Join			Right Join			Full outer join			Cross join	
+			1	1		1	1		1	1		1	1		1	1
+			1	2		1	2		1	1		1	1		1	2
+			1	1		1	1		1	2		1	2		1	1
+			1	2		1	2		1	2		1	2		1	2
+																
+	2. B.Y = B.Y		Inner Join			Left Join			Right Join			Full outer join			Cross join	
+			1	1		1	1		1	1		1	1		1	1
+			1	1		1	2		1	1		1	1		1	2
+			1	2		1	1		1	2		1	2		1	1
+			1	2		1	2		1	2		1	2		1	2
+																
+	3. A.X = B.Y		Inner Join			Left Join			Right Join			Full outer join			Cross join	
+			1	1		1	1		1	1		1	1		1	1
+			1	1		1	1		1	1		1	1		1	2
+									null	2		null	2		1	1
+															1	2
